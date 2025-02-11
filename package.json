@@ -12,7 +12,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "restify": "^10.0.0"
+    "@fastify/cors": "^10.0.2",
+    "restify": "^10.0.0",
+    "restify-cors-middleware2": "^2.2.1"
   },
   "devDependencies": {
     "@types/restify": "^8.5.12",
