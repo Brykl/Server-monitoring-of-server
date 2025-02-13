@@ -5,6 +5,10 @@ interface MemoryInfo {
   free: number;
 }
 
+interface NetworkInfo {
+    address: string;
+}
+
 interface CPUInfo {
   model: string;
   speed: number;
@@ -26,6 +30,8 @@ interface ServerInfo {
   memory: MemoryInfo;
   hostName: string;
   upTime: number;
+  maindir: string,
+  network: NetworkInfo;
 }
 
 const getServerInfo = (): ServerInfo => {
@@ -41,6 +47,8 @@ const getServerInfo = (): ServerInfo => {
     },
     hostName: os.hostname(), 
     upTime: os.uptime(), 
+    maindir: os.homedir(),
+    network: os.networkInterfaces(),
   };
 };
 

@@ -2,7 +2,7 @@ import { Request, Response, Next } from "restify";
 const corsMiddleware = require('restify-cors-middleware2')
 
 const cors = corsMiddleware({
-  origins: ["http://localhost:5173"],
+  origins: ["*"], //
   allowHeaders: ["X-Requested-With"],
 });
 
